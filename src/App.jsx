@@ -11,8 +11,6 @@ function App() {
     <>
       <div>
         <NewsContainer />
-        <NewsContainer />
-        <NewsContainer />
       </div>
     </>
   );

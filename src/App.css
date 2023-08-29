@@ -16,6 +16,10 @@
   text-align: left;
 }
 
+.news_container a {
+  color: white;
+}
+
 .news_container h2 {
   margin: 0;
   line-height: 1.9rem;
