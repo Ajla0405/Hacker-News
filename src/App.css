@@ -5,6 +5,43 @@
   text-align: center;
 }
 
+.news_container {
+  margin: 20px;
+  background-color: #000000;
+  border: 1px solid rgb(64, 255, 0);
+  color: rgb(64, 255, 0);
+  max-width: 400px;
+  border-radius: 10px;
+  padding: 5px 12px 12px 12px;
+  text-align: left;
+}
+
+.news_container h2 {
+  margin: 0;
+  line-height: 1.9rem;
+}
+.news_container p {
+  margin: 0;
+}
+
+.sub_infos {
+  display: flex;
+  justify-content: left;
+  font-size: 0.7rem;
+}
+
+.sub_infos a {
+  color: white;
+}
+
+.sub_infos > * {
+  margin-right: 7px;
+  margin-top: 7px;
+  padding: 0px 5px;
+  background-color: rgba(64, 255, 0, 0.377);
+  border-radius: 3px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
