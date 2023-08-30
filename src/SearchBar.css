@@ -7,7 +7,6 @@
 
 .search-bar {
   display: flex;
-
   background-color: transparent;
   justify-content: center;
 }
@@ -23,7 +22,7 @@
 }
 
 .search-button {
-  margin: auto;
+  /* margin: auto; */
   background-color: black;
   color: white;
   border: 1px solid #00ff29;
