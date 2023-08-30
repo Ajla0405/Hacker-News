@@ -1,0 +1,33 @@
+.headline {
+  font-size: 40px;
+  color: #00ff29;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+}
+
+.search-input {
+  background-color: black;
+  color: white;
+  border: 1px solid #00ff29;
+  border-radius: 12px;
+  padding: 8px 12px;
+  width: 400px;
+  margin-right: 20px;
+}
+
+.search-button {
+  /* margin: auto; */
+  background-color: black;
+  color: white;
+  border: 1px solid #00ff29;
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 15px;
+}
