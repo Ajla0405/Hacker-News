@@ -18,8 +18,15 @@
   text-align: left;
 }
 
+.news_container:hover {
+  background-color: rgb(35, 0, 54);
+  box-shadow: 0px 0px 13px 0px rgba(64, 255, 0, 0.3);
+  border: 1.5px solid rgb(64, 255, 0);
+}
+
 .news_container a {
-  color: rgba(255, 255, 255, 0.6);
+  line-height: 0.2rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .news_container a:hover {
@@ -31,6 +38,7 @@
   line-height: 1.9rem;
 }
 .news_container p {
+  line-height: 1.3rem;
   margin: 0;
 }
 
@@ -38,10 +46,6 @@
   display: flex;
   justify-content: left;
   font-size: 0.7rem;
-}
-
-.sub_infos a {
-  color: white;
 }
 
 .sub_infos > * {
