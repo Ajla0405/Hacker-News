@@ -1,3 +1,7 @@
+body {
+  background: black;
+}
+
 @import url("https://use.typekit.net/wqf6rpa.css");
 #root {
 margin: 0;
@@ -6,7 +10,7 @@ box-sizing: border-box;
 font-family: roboto-mono, sans-serif;
 }
 
-.sort-wrap {
+/*.sort-wrap {
     width: 90%;
     margin: auto;
 }
@@ -77,4 +81,4 @@ font-family: roboto-mono, sans-serif;
         background-color: rgba(190, 190, 190, 0.093);
         padding: 5px 10px;
     }
-}
+}*/
