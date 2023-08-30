@@ -5,6 +5,8 @@
   text-align: center;
 }
 
+/* ///////// Start / NewsContainer CSS ///////// */
+
 .news_container {
   margin: 20px;
   background-color: #000000;
@@ -45,6 +47,8 @@
   background-color: rgba(64, 255, 0, 0.377);
   border-radius: 3px;
 }
+
+/* ///////// End / NewsContainer CSS ///////// */
 
 .logo {
   height: 6em;
