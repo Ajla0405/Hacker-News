@@ -19,7 +19,11 @@
 }
 
 .news_container a {
-  color: white;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.news_container a:hover {
+  color: rgb(255, 98, 0);
 }
 
 .news_container h2 {

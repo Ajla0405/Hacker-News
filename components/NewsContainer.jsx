@@ -19,7 +19,7 @@ export default function NewsContainer() {
   /*  console.log(data.hits[1].title); */
   /*  console.log("hello", data[0].url) */
   /*  {data.map((data, index) => {return <div> data.hits[index].title} </div> )}*/
-
+  /* {data[index].url.split("/")[2]} */
   function toggle() {
     setShowArticles((showArticles) => !showArticles);
   }
@@ -31,12 +31,12 @@ export default function NewsContainer() {
           {index + 1} | {item.title}
         </h2>
         <a href={data[index].url} target="_blank">
-          {data[index].url}
+          {data[index].url.split("//")[1]}
         </a>
         <div className="sub_infos">
           <div>
             <p>
-              X Points by <a>User</a>
+              {index} Points by <a>User</a>
             </p>
           </div>
           <div>
@@ -61,7 +61,9 @@ export default function NewsContainer() {
 
   return (
     <>
-      <button onClick={toggle}>{showArticles ? "Hide" : "Show"} Articles</button>
+      <button onClick={toggle}>
+        {showArticles ? "Hide" : "Show"} Articles
+      </button>
       {showArticles && renderTitles(data)}
       <div className="news_container">
         <h2>01 | News Headline Lorem ipsum sed dolor nunquam in exemplarus</h2>
