@@ -21,6 +21,7 @@ body {
   padding: 0px 5px;
   background-color: rgba(64, 255, 0, 0.377);
   border-radius: 3px;
+}
 .sort-wrap {
     width: 90%;
     margin: auto;
@@ -60,7 +61,7 @@ body {
 .news_container p {
   line-height: 1.3rem;
   margin: 0;
-
+}
 .sorting-bar {
   list-style: none;
   padding: 0;
