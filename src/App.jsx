@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import Footer from "./components/Footer";
 import SortingBar from "./components/SortingBar";
+import NewsContainer from "../components/NewsContainer";
 import "./App.css";
 import "./SearchBar.css"
 
@@ -15,7 +16,7 @@ function App() {
 				</div>
 				<SearchBar />
 				<SortingBar />
-
+        <NewsContainer />
 				<Footer />
 		</>
 	);
