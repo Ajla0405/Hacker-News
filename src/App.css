@@ -2,45 +2,83 @@ body {
   background: black;
 }
 
+@import url("https://use.typekit.net/wqf6rpa.css");
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: roboto-mono, sans-serif;
 }
 
-/*.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/*.sort-wrap {
+    width: 90%;
+    margin: auto;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.sorting-bar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.sorting-bar::-webkit-scrollbar {
+  display: none;
+}
+.sorting-bar a {
+    font-weight: 300;
+    color: white;
+}
+.hn {
+    font-weight: 800;
+    font-size: 1.2em;
+    color: rgb(0,255,0);
+}
+.footer{
+    width: 100vw;
+    padding-left: 5%;
+}
+#footer-ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+#footer-ul > li::after, .sorting-bar>li::after {
+    content: "|";
+    margin: 0.5em;
+    color: gray;
+}
+#footer-ul > li:last-child::after, .sorting-bar>li:last-child::after{
+    content: none;
+}
+#footer-ul a {
+    color: rgb(0,255,0);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+@media (max-width: 599px) {
+    html,body {
+        width: 95vw;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .footer, .sorting-bar {
+        width: 90%;
+        margin: auto;
+    }
+    .footer{
+        padding: 0;
+    }
+    .hn{
+        width: 100%;
+    }
+    .sorting-bar .hn::after {
+        content: none;
+    }
+    .sorting-bar{
+        background-color: rgba(190, 190, 190, 0.093);
+        padding: 5px 10px;
+    }
 }*/

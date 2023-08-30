@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
-import reactLogo from "./assets/react.svg";
-
+import Footer from "./components/Footer";
+import SortingBar from "./components/SortingBar";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+	const [count, setCount] = useState(0);
 
-  return (
-    <div>
-      {/* Header Section */}
-      <div className="header">
-        <h1 className="headline">Hackernews</h1>
-      </div>
-      <SearchBar />
-    </div>
-  );
+	return (
+		<>
+				<div className="header">
+					<h1 className="headline">Hackernews</h1>
+				</div>
+				<SearchBar />
+				<SortingBar />
+        
+				<Footer />
+		</>
+	);
 }
 
 export default App;
