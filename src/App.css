@@ -129,41 +129,6 @@ body {
   .hn {
     width: 100%;
   }
-}
-#footer-ul > li::after,
-.sorting-bar > li::after {
-  content: "|";
-  margin: 0.5em;
-  color: gray;
-}
-#footer-ul > li:last-child::after,
-.sorting-bar > li:last-child::after {
-  content: none;
-}
-
-.card {
-  padding: 2em;
-}
-
-@media (max-width: 599px) {
-  html,
-  body {
-    width: 95vw;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
-  .footer,
-  .sorting-bar {
-    width: 90%;
-    margin: auto;
-  }
-  .footer {
-    padding: 0;
-  }
-  .hn {
-    width: 100%;
-  }
   .sorting-bar .hn::after {
     content: none;
   }

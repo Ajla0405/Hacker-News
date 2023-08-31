@@ -15,7 +15,7 @@ function App() {
         <h1 className="headline">Hackernews</h1>
       </div>
       {/* <SearchBar onSearch={setSearchQuery} /> */}
-      <SortingBar />
+
       <NewsContainer searchQuery={searchQuery} />
       <Footer />
     </>
