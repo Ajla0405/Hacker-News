@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SingleNews from "./SingleNews.jsx";
+import SortingBar from "../src/components/SortingBar.jsx";
 
 export default function NewsContainer() {
 	const [data, setData] = useState([]);
@@ -32,6 +33,7 @@ export default function NewsContainer() {
 
 	return (
 		<>
+			<SortingBar data={data} setData={setData} />
 			<button onClick={toggle}>{showArticles ? "Hide" : "Show"} News</button>
 
 			{showArticles &&
