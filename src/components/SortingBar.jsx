@@ -27,7 +27,7 @@ export default function SortingBar({ data, setData }) {
 				<li
 					onClick={() =>
 						sortBy(
-							"http://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=created_at_i>100400"
+							`http://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=created_at_i<${(Date.now() - 86400)}`
 						)
 					}
 				>
