@@ -10,7 +10,7 @@ function App() {
 		<>
 			<div className="header">
 				<a href="../index.html" id="hackernews">
-					<h1 className="headline">Hackernews</h1>
+					<h1 className="headline">HackerNews</h1>
 				</a>
 			</div>
 			<NewsContainer />
