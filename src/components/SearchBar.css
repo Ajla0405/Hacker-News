@@ -1,6 +1,6 @@
 .headline {
   font-size: 40px;
-  color: #00ff29;
+  color: rgb(0, 255, 0);
   margin-bottom: 50px;
   text-align: center;
 }
@@ -14,8 +14,8 @@
 .search-input {
   background-color: black;
   color: white;
-  border: 1px solid #00ff29;
-  border-radius: 12px;
+  border: 1px solid rgb(0, 255, 0);
+  border-radius: 20px;
   padding: 8px 12px;
   width: 400px;
   margin-right: 20px;
@@ -25,8 +25,8 @@
   /* margin: auto; */
   background-color: black;
   color: white;
-  border: 1px solid #00ff29;
-  border-radius: 12px;
+  border: 1px solid rgb(0, 255, 0);
+  border-radius: 20px;
   padding: 8px 12px;
   cursor: pointer;
   font-size: 15px;
