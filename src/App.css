@@ -72,6 +72,9 @@ body {
 	overflow-x: scroll;
 	scrollbar-width: none;
 }
+.sorting-bar li{
+	cursor: pointer;
+}
 .sorting-bar::-webkit-scrollbar {
 	display: none;
 }
