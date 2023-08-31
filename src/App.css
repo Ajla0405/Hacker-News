@@ -7,10 +7,11 @@
   align-items: center;
   font-family: roboto-mono, sans-serif;
 }
-body {
+html,body {
   background: black;
   display: flex;
   place-content: center;
+  overflow-x: h;
 }
 .sub_infos {
   display: flex;
@@ -75,6 +76,7 @@ body {
   font-size: 0.8rem;
   line-height: 1.3rem;
   margin: 0;
+  word-wrap:break-word;
 }
 .sorting-bar {
   list-style: none;
@@ -101,8 +103,8 @@ body {
   color: rgb(0, 255, 0);
 }
 .footer {
-  width: 100vw;
-  padding-left: 5%;
+  width: 100%;
+  padding-left: 2%;
 }
 #footer-ul {
   list-style: none;
@@ -127,15 +129,21 @@ body {
 @media (max-width: 599px) {
   html,
   body {
-    width: 95vw;
+    
     overflow-x: hidden;
     margin: 0;
     padding: 0;
   }
   .footer,
   .sorting-bar {
-    width: 90%;
+	width: fit-content;
     margin: auto;
+  }
+  .sorting-bar{
+	font-size: 1.1em;
+  }
+  #footer-ul {
+	justify-content: center;
   }
   .footer {
     padding: 0;
@@ -147,7 +155,9 @@ body {
     content: none;
   }
   .sorting-bar {
-    background-color: rgba(190, 190, 190, 0.093);
     padding: 5px 10px;
   }
+}
+#hackernews {
+	text-decoration: none;
 }
