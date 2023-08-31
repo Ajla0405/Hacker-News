@@ -7,7 +7,6 @@ import "./App.css";
 import "./SearchBar.css";
 
 function App() {
-	const newsArr = []
 
 	return (
 		<>
@@ -15,7 +14,6 @@ function App() {
 				<h1 className="headline">Hackernews</h1>
 			</div>
 			<SearchBar />
-			<SortingBar newsArr={newsArr} />
 			<NewsContainer />
 			<Footer />
 		</>
