@@ -1,22 +1,22 @@
 import React, { useState } from "react";
-import SearchBar from "./SearchBar";
 import Footer from "./components/Footer";
-import SortingBar from "./components/SortingBar";
 import NewsContainer from "./components/NewsContainer";
 import "./App.css";
-import "./SearchBar.css";
+import "./components/SearchBar.css";
 
 function App() {
-  return (
-    <>
-      <div className="header">
-        <h1 className="headline">HackerNEWS</h1>
-      </div>
-      <SearchBar />
-      <NewsContainer />
-      <Footer />
-    </>
-  );
+	//const [count, setCount] = useState(0);
+	return (
+		<>
+			<div className="header">
+				<a href="../index.html" id="hackernews">
+					<h1 className="headline">HackerNews</h1>
+				</a>
+			</div>
+			<NewsContainer />
+			<Footer />
+		</>
+	);
 }
 
 export default App;
