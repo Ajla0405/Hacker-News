@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SingleNews from "./SingleNews.jsx";
-import SortingBar from "../src/components/SortingBar.jsx";
+import SortingBar from "./SortingBar.jsx";
+import SearchBar from "./SearchBar.jsx";
 
 export default function NewsContainer() {
 	const [data, setData] = useState([]);
-	const url = "http://hn.algolia.com/api/v1/search?tags=front_page";
+	//ayla
 	const [showArticles, setShowArticles] = useState(true);
+
+	const url = "http://hn.algolia.com/api/v1/search?tags=front_page";
 
 	const getData = async () => {
 		try {
@@ -26,19 +29,23 @@ export default function NewsContainer() {
 	function toggle() {
 		setShowArticles((showArticles) => !showArticles);
 	}
-
 	useEffect(() => {
 		getData();
 	}, []);
 
 	return (
 		<>
+			<SearchBar data={data} setData={setData} />
 			<SortingBar data={data} setData={setData} />
 			<button onClick={toggle}>{showArticles ? "Hide" : "Show"} News</button>
-
 			{showArticles &&
 				data.map((item, index) => (
-					<SingleNews data={data} item={item} index={index} />
+					<SingleNews
+						data={data}
+						item={item}
+						index={index}
+						key={item.objectID}
+					/>
 				))}
 		</>
 	);
