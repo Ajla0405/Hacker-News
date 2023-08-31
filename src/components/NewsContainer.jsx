@@ -26,9 +26,9 @@ export default function NewsContainer() {
 	/*  {data.map((data, index) => {return <div> data.hits[index].title} </div> )}*/
 	/* {data[index].url.split("/")[2]} */
 
-	function toggle() {
-		setShowArticles((showArticles) => !showArticles);
-	}
+	// function toggle() {
+	// 	setShowArticles((showArticles) => !showArticles);
+	// }
 	useEffect(() => {
 		getData();
 	}, []);
@@ -37,8 +37,8 @@ export default function NewsContainer() {
 		<>
 			<SearchBar data={data} setData={setData} />
 			<SortingBar data={data} setData={setData} />
-			<button onClick={toggle}>{showArticles ? "Hide" : "Show"} News</button>
-			{showArticles &&
+			{/* <button onClick={toggle}>{showArticles ? "Hide" : "Show"} News</button> */}
+			{data.length ? (
 				data.map((item, index) => (
 					<SingleNews
 						data={data}
@@ -46,7 +46,10 @@ export default function NewsContainer() {
 						index={index}
 						key={item.objectID}
 					/>
-				))}
+				))
+			) : (
+				console.log("hier kommt dann der Spinner rein")
+			)}
 		</>
 	);
 }

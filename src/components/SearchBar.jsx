@@ -22,16 +22,19 @@ const SearchBar = ({ data, setData }) => {
 
 	return (
 		<div className="search-bar">
-			<input
-				className="search-input"
-				type="text"
-				placeholder="Search..."
-				value={searchQuery}
-				onChange={(e) => setSearchQuery(e.target.value)}
-			/>
-			<button className="search-button" onClick={handleSearch}>
-				Search
-			</button>
+			<form onSubmit={(e) => {
+				e.preventDefault();
+				handleSearch(searchQuery);
+			}}>
+				<input
+					className="search-input"
+					type="text"
+					placeholder="Search..."
+					value={searchQuery}
+					onChange={(e) => setSearchQuery(e.target.value)}
+				/>
+				<button className="search-button">Search</button>
+			</form>
 		</div>
 	);
 };

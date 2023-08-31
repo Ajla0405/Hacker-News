@@ -9,7 +9,9 @@ function App() {
 	return (
 		<>
 			<div className="header">
-				<h1 className="headline">Hackernews</h1>
+				<a href="../index.html" id="hackernews">
+					<h1 className="headline">Hackernews</h1>
+				</a>
 			</div>
 			<NewsContainer />
 			<Footer />
