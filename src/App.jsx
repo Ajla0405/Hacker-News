@@ -7,17 +7,16 @@ import "./App.css";
 import "./SearchBar.css";
 
 function App() {
-
-	return (
-		<>
-			<div className="header">
-				<h1 className="headline">Hackernews</h1>
-			</div>
-			<SearchBar />
-			<NewsContainer />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <div className="header">
+        <h1 className="headline">HackerNEWS</h1>
+      </div>
+      <SearchBar />
+      <NewsContainer />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
