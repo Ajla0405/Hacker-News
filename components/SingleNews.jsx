@@ -7,7 +7,7 @@ export default function SingleNews({ data, item, index }) {
         </h2>
         <p>
           <a href={data[index].url} target="_blank">
-            {data[index].url.split("//")[1]}
+            {/*data[index].url.split("//")[1]*/}
           </a>
         </p>
         <div className="sub_infos">

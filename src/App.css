@@ -6,7 +6,9 @@
 }
 
 /* ///////// Start / NewsContainer CSS ///////// */
-
+body {
+  background-color: #000000;
+}
 .news_container {
   margin: 20px;
   background-color: #000000;
