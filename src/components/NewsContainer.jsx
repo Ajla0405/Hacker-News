@@ -32,7 +32,7 @@ export default function NewsContainer() {
 
   return (
     <>
-      <button onClick={toggle}>{showArticles ? "Hide" : "Show"} News</button>
+      {/* <button onClick={toggle}>{showArticles ? "Hide" : "Show"} News</button> */}
 
       {showArticles &&
         data
