@@ -2,14 +2,11 @@ export default function SingleNews({ data, item, index }) {
   return (
     <>
       <div className="news_container" key={index}>
-        <h2>
-          {index + 1} | {item.title}
-        </h2>
-        <p>
-          <a href={data[index].url} target="_blank">
-            {/*data[index].url.split("//")[1]*/}
-          </a>
-        </p>
+        <a href={data[index].url} target="_blank">
+          <h2>
+            {index + 1} | {item.title}
+          </h2>
+        </a>
         <div className="sub_infos">
           <div>
             <p>

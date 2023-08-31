@@ -1,28 +1,53 @@
-export default function SortingBar() {
-return (
-	<>
+import axios from "axios";
+
+export default function SortingBar({ data, setData }) {
+	async function sortBy(url) {
+		try {
+			const response = await axios.get(url);
+			if (response.status === 200) {
+				setData(response.data.hits);
+			} else {
+				console.error("Request was not successful.");
+			}
+		} catch (error) {
+			console.error("Error fetching data:", error);
+		}
+	}
+
+	return (
 		<div className="sort-wrap">
 			<ul className="sorting-bar">
-                <li>
-					<span>new</span>
+				<li
+					onClick={() =>
+						sortBy("http://hn.algolia.com/api/v1/search_by_date?tags=story")
+					}
+				>
+					new
 				</li>
-				<li>
-					<span>past</span>
+				<li
+					onClick={() =>
+						sortBy(
+							`http://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=created_at_i<${(Date.now() - 86400)}`
+						)
+					}
+				>
+					past
 				</li>
-				<li>
-					<span>comments</span>
+				<li
+					onClick={() =>
+						sortBy("http://hn.algolia.com/api/v1/search_by_date?tags=ask_hn")
+					}
+				>
+					ask
 				</li>
-				<li>
-					<span>ask</span>
-				</li>
-				<li>
-					<span>show</span>
-				</li>
-				<li>
-					<span>jobs</span>
+				<li
+					onClick={() =>
+						sortBy("http://hn.algolia.com/api/v1/search_by_date?tags=show_hn")
+					}
+				>
+					show
 				</li>
 			</ul>
 		</div>
-	</>
-);
+	);
 }
