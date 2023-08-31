@@ -1,23 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import SingleNews from "./SingleNews.jsx";
-import SearchBar from "../src/SearchBar.jsx";
-import SortingBar from "../src/components/SortingBar.jsx";
+import SortingBar from "./SortingBar.jsx";
+import LoadingSpinner from "./LoadingSpinner.jsx";
+import SearchBar from "./SearchBar.jsx";
 
-export default function NewsContainer({ searchQuery }) {
+export default function NewsContainer() {
   const [data, setData] = useState([]);
-  //ayla
-  const [showArticles, setShowArticles] = useState(true);
-
   const url = "http://hn.algolia.com/api/v1/search?tags=front_page";
+  const [showArticles, setShowArticles] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const getData = async () => {
+    setIsLoading(true);
     try {
       const response = await axios.get(url);
       setData(response.data.hits);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
+    setIsLoading(false);
   };
 
   /*  console.log("hello", data) */
@@ -26,33 +28,25 @@ export default function NewsContainer({ searchQuery }) {
   /*  {data.map((data, index) => {return <div> data.hits[index].title} </div> )}*/
   /* {data[index].url.split("/")[2]} */
 
-  function toggle() {
-    setShowArticles((showArticles) => !showArticles);
-  }
-  // Ayla
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-  };
-
+  // function toggle() {
+  // 	setShowArticles((showArticles) => !showArticles);
+  // }
   useEffect(() => {
     getData();
-  }, [searchQuery]);
+  }, []);
 
   return (
     <>
+      <SearchBar data={data} setData={setData} />
       <SortingBar data={data} setData={setData} />
-      <button onClick={toggle}>{showArticles ? "Hide" : "Show"} News</button>
-
-      <SearchBar onSearch={handleSearch} />
+      {/* 			<button onClick={toggle}>{showArticles ? "Hide" : "Show"} News</button> */}
+      {isLoading && <LoadingSpinner />}
       {showArticles &&
-        data.map((item, index) => (
-          <SingleNews
-            data={data}
-            item={item}
-            index={index}
-            key={item.objectID}
-          />
-        ))}
+        data
+          .slice(0, 15)
+          .map((item, index) => (
+            <SingleNews data={data} item={item} index={index} />
+          ))}
     </>
   );
 }
